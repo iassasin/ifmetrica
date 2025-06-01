@@ -1,0 +1,6 @@
+[submodule "libs/clickhouse-cpp"]
+	path = libs/clickhouse-cpp
+	url = https://github.com/ClickHouse/clickhouse-cpp.git
+[submodule "libs/nlohmann_json"]
+	path = libs/nlohmann_json
+	url = https://github.com/nlohmann/json

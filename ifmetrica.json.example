@@ -1,0 +1,20 @@
+{
+	"debug": false,
+
+	"clickhouse": {
+		"host": "localhost",
+		"port": 9000,
+		"database": "db",
+		"user": "user",
+		"password": "pass"
+	},
+
+	"groupId": "test",
+	"maxBufferedStates": 3600,
+	"minStatesToInsert": 15,
+
+	"_interfaces_comment": "if empty, all interfaces will be inserted to clickhouse",
+	"interfaces": [
+
+	]
+}
