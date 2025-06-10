@@ -1,19 +1,19 @@
 -- create table in clickhouse
 
 CREATE TABLE network_interfaces(
-	time DateTime,
-	group_id LowCardinality(String),
-	iface LowCardinality(String),
+	time DateTime CODEC(Delta, ZSTD(1)),
+	group_id LowCardinality(String) CODEC(ZSTD(1)),
+	iface LowCardinality(String) CODEC(ZSTD(1)),
 
-	rx_bytes UInt32,
-	rx_packets UInt32,
-	rx_errors UInt32,
-	rx_drops UInt32,
+	rx_bytes UInt32 CODEC(ZSTD(1)),
+	rx_packets UInt32 CODEC(ZSTD(1)),
+	rx_errors UInt32 CODEC(ZSTD(1)),
+	rx_drops UInt32 CODEC(ZSTD(1)),
 
-	tx_bytes UInt32,
-	tx_packets UInt32,
-	tx_errors UInt32,
-	tx_drops UInt32
+	tx_bytes UInt32 CODEC(ZSTD(1)),
+	tx_packets UInt32 CODEC(ZSTD(1)),
+	tx_errors UInt32 CODEC(ZSTD(1)),
+	tx_drops UInt32 CODEC(ZSTD(1))
 )
 ENGINE = MergeTree()
 PARTITION BY toYYYYMM(time)
